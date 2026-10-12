@@ -1,0 +1,71 @@
+﻿<Window x:Class="SterowanieTarczRozrzadowych.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SterowanieTarczRozrzadowych"
+        mc:Ignorable="d"
+        Title="Sterowanie tarcz rozrzadowych" Height="500" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock Text="Sterowanie tarcz rozrządowych"
+                FontSize="24"
+                HorizontalAlignment="Center"/>
+            <Button Content="Rt 1 - Pchanie zabronione"
+                    Click="Rt1Button_Click"
+                    Margin="0,16,0,0"
+                    Padding="12,8"/>
+            <Button Content="Rt 2 - Pchać powoli"
+                    Click="Rt2Button_Click"
+                    Margin="0,16,0,0"
+                    Padding="12,8"/>
+            <Button Content="Rt 3 - Pchać z umiarkowaną prędkością"
+                    Click="Rt3Button_Click"
+                    Margin="0,16,0,0"
+                    Padding="12,8"/>
+            <Button Content="Rt 4 - Cofnąć"
+                    Click="Rt4Button_Click"
+                    Margin="0,16,0,0"
+                    Padding="12,8"/>
+            <Button Content="Rt 5 - Podepchnąć skład do górki"
+                    Click="Rt5Button_Click"
+                    Margin="0,16,0,0"
+                    Padding="12,8"/>
+            <TextBlock x:Name="SignalPreview"
+                       Text="Nie wybrano sygnału"
+                       Margin="0,16,0,0"
+                       FontSize="18"
+                       HorizontalAlignment="Center"/>
+            <Grid Width="90"
+                    Height="90"
+                    Margin="0,12,0,0">
+
+                <Polygon Width="90"
+                            Height="90"
+                            Points="25,0 65,0 90,25 90,65 65,90 25,90 0,65 0,25"
+                            Fill="Black"
+                            Stroke="Black"
+                            StrokeThickness="2"/>
+                <UniformGrid Rows="3"
+                                Columns="3"
+                                Width="72"
+                                Height="72"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+                    <Border/>
+                    <Ellipse x:Name="LampTM" Width="12" Height="12" Fill="White" Opacity="0.55"/>
+                    <Ellipse x:Name="LampTR" Width="12" Height="12" Fill="White" Opacity="0.55"/>
+
+                    <Ellipse x:Name="LampML" Width="12" Height="12" Fill="White" Opacity="0.55"/>
+                    <Ellipse x:Name="LampMM" Width="12" Height="12" Fill="White" Opacity="0.55"/>
+                    <Ellipse x:Name="LampMR" Width="12" Height="12" Fill="White" Opacity="0.55"/>
+
+                    <Ellipse x:Name="LampBL" Width="12" Height="12" Fill="White" Opacity="0.55"/>
+                    <Ellipse x:Name="LampBM" Width="12" Height="12" Fill="White" Opacity="0.55"/>
+                    <Border/>
+                </UniformGrid>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
